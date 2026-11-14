@@ -78,7 +78,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Use physical memory footprint for high-memory restart alerts so shared, reclaimable framework pages do not trigger false warnings (#869).
 - **Paused downloads stop the spinner**: pausing a download leaves its temporary file in place, which is all the folder-based detection can see, so the live activity kept animating as if bytes were still arriving until the download was cancelled. The speed sampler now notices when the partial files stop growing for two seconds and shows a pause glyph instead of the spinner; when bytes start arriving again the indicator goes back to normal. A stalled connection looks the same on disk and is reported the same way. Downloads already present when monitoring starts are detected when they resume writing. (#922)
-- Fix battery popover text contrast in light mode by using the system label color instead of the notch header’s inherited gray. (#494)
+- Fix battery popover text contrast in light mode by using the system label color instead of the notch header's inherited gray. (#494)
+- Correct the Russian clipboard history size labels for three and seven items. (#724)
 - A tab count in the notch settings could not be formatted. `%lld tab%@ enabled · min %lld px` was translated using `%1lld` — missing the `$` — so it was never parsed as a positional specifier, and the separator was U+22C5 (dot operator) rather than the U+00B7 the source uses. (#789)
 - The microphone privacy indicator description showed an unrelated sentence about a meeting start time, which also introduced a `%@` that the source string does not have — reading an argument that was never passed. (#789)
 - A shipped string began with `추천 번역 ⭐️: `, an AI suggestion prefix that had been committed along with the translation it labelled. (#789)
