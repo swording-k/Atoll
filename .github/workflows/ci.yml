@@ -45,6 +45,9 @@ jobs:
       - name: Validate memory footprint accounting
         run: python3 -m unittest tests.test_memory_footprint
 
+      - name: Validate independent calendar permissions
+        run: python3 -m unittest tests.test_calendar_access
+
       - name: Validate timer lifecycle cleanup
         run: python3 -m unittest tests.test_timer_lifecycle
 

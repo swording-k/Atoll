@@ -81,6 +81,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix battery popover text contrast in light mode by using the system label color instead of the notch header's inherited gray. (#494)
 - Correct the Russian clipboard history size labels for three and seven items. (#724)
 - Keep minimalistic player artwork below the physical notch when the battery indicator is hidden. (#875)
+- Keep calendar settings available when only Reminders access is missing (and vice versa), show permissions independently, and refresh them after returning from System Settings (#886).
 - A tab count in the notch settings could not be formatted. `%lld tab%@ enabled · min %lld px` was translated using `%1lld` — missing the `$` — so it was never parsed as a positional specifier, and the separator was U+22C5 (dot operator) rather than the U+00B7 the source uses. (#789)
 - The microphone privacy indicator description showed an unrelated sentence about a meeting start time, which also introduced a `%@` that the source string does not have — reading an argument that was never passed. (#789)
 - A shipped string began with `추천 번역 ⭐️: `, an AI suggestion prefix that had been committed along with the translation it labelled. (#789)
